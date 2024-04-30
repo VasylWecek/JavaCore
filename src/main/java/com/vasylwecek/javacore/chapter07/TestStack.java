@@ -1,11 +1,11 @@
 package chapter07;
 
-class Stack {
+class Stack6 {
     private int[] stack = new int[10]; // Переименован для ясности
     private int top; // Индекс вершины стека
 
     // Конструктор для инициализации стека
-    Stack() {
+    Stack6() {
         top = -1; // Инициализация с -1, указывающая на пустой стек
     }
 
@@ -32,7 +32,7 @@ class Stack {
 // Класс для тестирования стека
 class StackTest {
     public static void main(String[] args) {
-        Stack myStack = new Stack(); // Создание экземпляра стека
+        Stack6 myStack = new Stack6(); // Создание экземпляра стека
 
         // Добавление элементов в стек
         for (int i = 0; i < 10; i++) {

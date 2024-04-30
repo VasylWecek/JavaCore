@@ -32,23 +32,23 @@ class Stack {
 }
 
 // Класс для тестирования стека
-class TestStack2 {
-    public static void main(String[] args) {
-        Stack mystack1 = new Stack(5); // Создание стека размером 5
-        Stack mystack2 = new Stack(8); // Создание стека размером 8
-
-        // Заполнение каждого стека числами
-        for (int i = 0; i < 5; i++) mystack1.push(i);
-        for (int i = 0; i < 8; i++) mystack2.push(i);
-
-        // Извлечение и вывод элементов стека mystack1
-        System.out.println("Стек в mystack1:");
-        for (int i = 0; i < 5; i++)
-            System.out.println(mystack1.pop());
-
-        // Извлечение и вывод элементов стека mystack2
-        System.out.println("Стек в mystack2:");
-        for (int i = 0; i < 8; i++)
-            System.out.println(mystack2.pop());
-    }
-}
+//class TestStack2 {
+//    public static void main(String[] args) {
+//        Stack6 mystack1 = new Stack6(5); // Создание стека размером 5
+//        Stack6 mystack2 = new Stack6(8); // Создание стека размером 8
+//
+//        // Заполнение каждого стека числами
+//        for (int i = 0; i < 5; i++) mystack1.push(i);
+//        for (int i = 0; i < 8; i++) mystack2.push(i);
+//
+//        // Извлечение и вывод элементов стека mystack1
+//        System.out.println("Стек в mystack1:");
+//        for (int i = 0; i < 5; i++)
+//            System.out.println(mystack1.pop());
+//
+//        // Извлечение и вывод элементов стека mystack2
+//        System.out.println("Стек в mystack2:");
+//        for (int i = 0; i < 8; i++)
+//            System.out.println(mystack2.pop());
+//    }
+//}
