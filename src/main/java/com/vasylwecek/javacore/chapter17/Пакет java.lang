@@ -1,0 +1,171 @@
+Пакет java.lang:
+    Пакет java.lang наиболее широко используется в Java и включает в себя следующие классы:
+    Boolean
+    Byte
+    Character
+    Character.Subset
+    Character.UnicodeBlock
+    Class
+    ClassLoader
+    ClassValue
+    Compiler
+    Double
+    Enum
+    Float
+    InheritableThreadLocal
+    Integer
+    Long
+    Math
+    Number
+    Object
+    Package
+    Process
+    ProcessBuilder
+    ProcessBuilder.Redirect
+    Runtime
+    RuntimePermission
+    SecurityManager
+    Short
+    StackTraceElement
+    StrictMath
+    String
+    StringBuffer
+    StringBuilder
+    System
+    Thread
+    threadGroup
+    ThreadLocal
+    Throwable
+    Void
+
+    Ниже перечислены интерфейсы, определенные в пакете java.lang:
+        Appendable
+        AutoCloseable
+        CharSequence
+        Cloneable
+        Comparable
+        Iterable
+        Readable
+        Runnable
+        Thread.UncaughtExceptionHandler
+
+    Class Number:
+        Абстрактный класс Number является суперклассом, который реализуется в:
+            byte byteValue()
+            double doubleValue()
+            float floatValue()
+            int intValue()
+            long longValue()
+            short shortValue()
+
+    Class Double and Float:
+        Эти классы служат оболочками для числовых значений с плавающей точкой типа double i float соответственно;
+        Ниже приведены конструкторы класса Float:
+            Float (double число)
+            Float (float число)
+            Float (String строка) throws NumberFormatException
+
+        Ниже приведены конструкторы класса Double:
+            Double (double число)
+            Double (String строка) throws NumberFormatException
+
+        В классах Float и Double определяются следующие константы:
+            BYTES - Длина типа float или douЫe в байтах;
+            MAX_EXPONENT - Максимальный показатель степени;
+            MAX_VALUE - Максимальное положительное значение;
+            MIN_EXPONENT - Минимальный показатель степени;
+            MIN_NORMAL - Минимальное положительное нормальное значение;
+            MIN_VALUE - Минимальное положительное значение;
+            NaN - Не число;
+            POSITIVE_INFINITY - Положительная бесконечность;
+            NEGATIVE_INFINITY - Отрицательная бесконечность;
+            SIZE - Размер заключенного в оболочку значения в битах;
+            TYPE - Объект типа Class для типов float и double;
+
+        Методы из класса Float:
+             byte byteValue() - Возвращает значение вызывающего объекта как тип byte;
+             static int compare(float число1, float число2) - Сравнивает значения число1 i число2.
+                    Возвращает нулевое значение, если сравниваемые числовые значения равны;
+                    -1 if число1 < число2, 1 if число1 > число2;
+             int compareTo(Float f) - Сравнивает числовое значение вызывающего объекта со значением
+                    объекта f. Возвращает 0, если значения равны; отрицательное значение, если
+                    вызывающий объект имеет меньшее значение; или положительное значение, если
+                    вызывающий объект имеет большее значение.
+             double doubleValue() - Возвращает значение вызывающего объекта как тип double;
+             boolean equals(Object FloatObj) - Возвращает логическое значение true, если вызывающий
+                    объект типа Float равен объекту FloatObj; в противном случае возвращает false.
+             static int floatToInBits(float число) - Возвращает совместимую со стандартом IEEE
+                    комбинацию двоичных разрядов одинарной точности, соответствующую заданному число.
+             static int floatToRawInBits(float число) - Возвращает битовую структуру числа с плавающей
+                    точкой, как определено стандартом IEEE. Для значений NaN допускаются разные битовые
+                    представления.
+             float floatValue() - Возвращает значение вызывающего объекта как тип float.
+             int hashCode() - Возвращает хеш-код для вызывающего объекта.
+             static int hashCode(float число) - Возвращает хеш-код для данного числа типа float.
+             static float intBitsToFloat(int число) - Преобразует битовую структуру целого числа
+                    в значение типа float.
+             int intValue() - Возвращает значение вызывающего объекта как тип int.
+             boolean isInfinite() - Возвращает true, если объект представляет бесконечность.
+             static boolean isInfinite(float число) - Возвращает true, если число представляет бесконечность.
+             boolean isNaN() - Возвращает true, если объект представляет значение NaN.
+             static boolean isNaN(float число) - Возвращает логическое значение true, если число определяет нечисловое значение;
+             long longValue() - Возвращает значение вызывающего объекта как тип long.
+             static float max(float val, float val2) - Возвращает наибольшее из двух чисел;
+             static float min(float val, float val2) - Возвращает наименьшее из двух чисел;
+             static float parseFloat(String строка) throws NumberFormatException - Преобразует строку в число типа float;
+             short shortValue() - Возвращает значение вызывающего объекта как тип short;
+             static float sum(float val, float val2) - Возвращает сумму двух значений;
+             static String toHexString(float число) - Возвращает строковое представление числа в шестнадцатеричном формате.;
+             String toString () - Возвращает строковый эквивалент вызывающего объекта;
+             static String toString (float число) - Возвращает строковый эквивалент значения, определяемого параметром число;
+             static Float valueOf(float число) - Возвращает объект типа Float, содержащий значение, передаваемое в качестве параметра число;
+             static Float valueOf(String строка) throws NumberFormatException - Возвращает объект типа Float, содержащий значение, указанное в строке
+        Методы из класса Double:
+             byte byteValue() - Возвращает значение вызывающего объекта как тип byte;
+             static int compare(double число1, double число2) - Сравнивает два значения
+                    типа double. Возвращает 0, если они равны; отрицательное значение,
+                    если число1 меньше число2; положительное значение, если число1 больше число2.
+
+
+Методы Float и Double включают методы isInfinite() и isNaN():
+    которые используются для идентификации специальных значений чисел с плавающей
+    точкой по стандарту IEEE: бесконечности (Infinity) и не-числа (NaN).
+
+    isInfinite(): Возвращает true, если число является бесконечным (бесконечно большим или малым).
+    isNaN(): Возвращает true, если число не является числовым значением (NaN).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
