@@ -1,0 +1,123 @@
+Интерфейс List расширяет интерфейс Collection и определяет поведение коллекций, сохраняющих
+    последовательность элементов. В List элементы могут быть введены или извлечены по индексу,
+    начиная с нуля. Список может содержать повторяющиеся элементы. Интерфейс List является обобщенным
+    и объявляется как interface List<E>, где E обозначает тип объектов, которые должен содержать список.
+
+  Методы добавления элементов
+    add(E e)
+    Описание: Вставляет элемент в конец списка.
+    Пример: list.add("element");
+
+    add(int index, E element)
+    Описание: Вставляет элемент в указанную позицию списка, сдвигая последующие элементы вправо.
+    Пример: list.add(2, "element");
+
+    addAll(Collection<? extends E> c)
+    Описание: Вставляет все элементы из коллекции c в конец списка.
+    Пример: list.addAll(otherList);
+
+    addAll(int index, Collection<? extends E> c)
+    Описание: Вставляет все элементы из коллекции c в список, начиная с указанной позиции, сдвигая последующие элементы вправо.
+    Пример: list.addAll(2, otherList);
+
+  Методы удаления элементов
+    remove(int index)
+    Описание: Удаляет элемент из списка по указанному индексу и возвращает удаленный элемент.
+    Пример: list.remove(2);
+
+    remove(Object o)
+    Описание: Удаляет первое вхождение указанного элемента из списка, если он присутствует.
+    Пример: list.remove("element");
+
+    removeAll(Collection<?> c)
+    Описание: Удаляет из списка все элементы, присутствующие в указанной коллекции.
+    Пример: list.removeAll(otherList);
+
+    retainAll(Collection<?> c)
+    Описание: Удаляет из списка все элементы, кроме указанных в коллекции c.
+    Пример: list.retainAll(otherList);
+
+    clear()
+    Описание: Удаляет все элементы из списка.
+    Пример: list.clear();
+
+  Методы обновления элементов
+    set(int index, E element)
+    Описание: Заменяет элемент на указанной позиции в списке на указанный элемент и
+        возвращает старое значение.
+    Пример: list.set(2, "newElement");
+
+    replaceAll(UnaryOperator<E> operator)
+    Описание: Заменяет каждый элемент списка результатом применения оператора к этому
+        элементу (добавлен в JDK 8).
+    Пример: list.replaceAll(String::toUpperCase);
+
+  Методы получения элементов
+    get(int index)
+    Описание: Возвращает элемент, находящийся на указанной позиции в списке.
+    Пример: list.get(2);
+
+    indexOf(Object o)
+    Описание: Возвращает индекс первого вхождения указанного элемента в списке, или -1,
+        если элемент не найден.
+    Пример: list.indexOf("element");
+
+    lastIndexOf(Object o)
+    Описание: Возвращает индекс последнего вхождения указанного элемента в списке, или -1,
+        если элемент не найден.
+    Пример: list.lastIndexOf("element");
+
+  Методы итерации
+    listIterator()
+    Описание: Возвращает итератор для обхода элементов списка.
+    Пример: ListIterator<String> it = list.listIterator();
+
+    listIterator(int index)
+    Описание: Возвращает итератор, начинающийся с указанной позиции в списке.
+    Пример: ListIterator<String> it = list.listIterator(2);
+
+  Методы представления
+    subList(int fromIndex, int toIndex)
+    Описание: Возвращает подсписок от позиции fromIndex (включительно) до toIndex (исключительно).
+    Пример: List<String> sublist = list.subList(2, 5);
+
+  Методы сортировки и потоки
+    sort(Comparator<? super E> c)
+    Описание: Сортирует список с использованием заданного компаратора (добавлен в JDK 8).
+    Пример: list.sort(String::compareTo);
+
+    stream()
+    Описание: Возвращает последовательный поток с элементами этого списка (добавлен в JDK 8).
+    Пример: list.stream().forEach(System.out::println);
+
+    parallelStream()
+    Описание: Возвращает параллельный поток с элементами этого списка (добавлен в JDK 8).
+    Пример: list.parallelStream().forEach(System.out::println);
+
+   примеры исключений, которые могут быть сгенерированы методами интерфейса List:
+        UnsupportedOperationException
+            - Это исключение выбрасывается, если операция не поддерживается конкретной реализацией списка.
+            List<String> list = Arrays.asList("a", "b", "c");
+            list.add("d"); // UnsupportedOperationException
+
+        ClassCastException
+            - выбрасывается, если объект неправильного типа вставляется в коллекцию, которая ограничена элементами определенного типа.
+            List list = new ArrayList();
+            list.add("a");
+            list.add(1); // ClassCastException при попытке приведения типов
+
+        IndexOutOfBoundsException
+            - выбрасывается, если указанный индекс вне допустимого диапазона (меньше нуля или больше размера списка).
+            List<String> list = new ArrayList<>();
+            list.add("a");
+            list.get(1); // IndexOutOfBoundsException
+
+        NullPointerException
+            - выбрасывается, если в список пытаются добавить null, и этот список не допускает null элементы, или если выполняется операция с элементом, который равен null.
+            List<String> list = new ArrayList<>();
+            list.add(null); // NullPointerException, если список не допускает null
+
+        IllegalArgumentException
+            - выбрасывается, если переданный аргумент не является допустимым для метода.
+            List<String> list = new ArrayList<>();
+            list.subList(1, 0); // IllegalArgumentException: fromIndex > toIndex
