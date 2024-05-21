@@ -1,0 +1,28 @@
+Интерфейс Comparator является обобщенным и объявляется следующим образом:
+
+    interface Comparator<T>, где T обозначает тип сравниваемых объектов.
+
+
+До версии JDK 8 интерфейс Comparator включал два метода:
+
+1. compare(T o1, T o2) – сравнивает два объекта по порядку:
+    - Возвращает 0, если объекты равны.
+    - Положительное значение, если первый объект больше второго.
+    - Отрицательное значение, если первый объект меньше второго.
+2. equals(Object obj) – проверяет объект на равенство с вызывающим компаратором.
+
+Нововведения JDK 8:
+1. reversed() – возвращает компаратор с обратным порядком: default Comparator<T> reversed()
+2. reverseOrder() – возвращает компаратор с обратным естественным порядком: static <T extends Comparable<? super T>> Comparator<T> reverseOrder()
+3. naturalOrder() – возвращает компаратор с естественным порядком: static <T extends Comparable<? super T>> Comparator<T> naturalOrder()
+4. nullsFirst() и nullsLast() – возвращают компараторы, обрабатывающие значения null:
+    static <T> Comparator<T> nullsFirst(Comparator<? super T> comparator)
+    static <T> Comparator<T> nullsLast(Comparator<? super T> comparator)
+5. thenComparing() – метод для вторичного сравнения:
+    default Comparator<T> thenComparing(Comparator<? super T> other)
+    default <U extends Comparable<? super U>> Comparator<T> thenComparing(Function<? super T, ? extends U> keyExtractor)
+    default <U> Comparator<T> thenComparing(Function<? super T, ? extends U> keyExtractor, Comparator<? super U> keyComparator)
+
+Интерфейс Comparator предоставляет мощные возможности для определения порядка сортировки объектов в
+коллекциях. С добавлением новых методов в JDK 8, он стал еще более гибким, позволяя легко создавать
+компараторы для различных сценариев использования.
