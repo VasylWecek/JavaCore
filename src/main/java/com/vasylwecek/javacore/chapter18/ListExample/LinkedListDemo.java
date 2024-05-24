@@ -1,4 +1,4 @@
-package chapter18;
+package chapter18.ListExample;
 import java.util.LinkedList;
 
 public class LinkedListDemo {
