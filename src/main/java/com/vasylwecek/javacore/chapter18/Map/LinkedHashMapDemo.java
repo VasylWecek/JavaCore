@@ -1,4 +1,4 @@
-package chapter18;
+package chapter18.Map;
 import java.util.*;
 public class LinkedHashMapDemo {
     public static void main(String[] args) {

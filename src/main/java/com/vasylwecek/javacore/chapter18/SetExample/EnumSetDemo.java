@@ -1,4 +1,4 @@
-package chapter18;
+package chapter18.SetExample;
 import java.util.EnumSet;
 
 public class EnumSetDemo {
