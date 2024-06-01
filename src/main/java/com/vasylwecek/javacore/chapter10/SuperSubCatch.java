@@ -12,6 +12,8 @@ public class SuperSubCatch {
             int a = 0;
             int b = 42/a;
 
+        //} catch (Exception e){
+            System.out.println("Перехват исключений общего класса Exception ");
         }
         /*
         Этот оператор catch вообще не будет достигнут, т.к. подкласс ArithmeticException
