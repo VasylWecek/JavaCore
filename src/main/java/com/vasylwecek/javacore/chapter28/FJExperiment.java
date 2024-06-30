@@ -75,5 +75,7 @@ public class FJExperiment {
         System.out.println("Уровень параллелизма: " + pLevel);
         System.out.println("Порог параллелизма: " + threshold);
         System.out.println("Истекшее время: " + (endT - beginT) + " нс");
+
+
     }
 }
