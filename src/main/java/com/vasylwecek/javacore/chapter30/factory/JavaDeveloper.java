@@ -1,7 +1,12 @@
 package chapter30.factory;
 
-public class JavaDeveloper {
-    void writeJavaCode() {
+import chapter30.bridge.Developer;
+
+public class JavaDeveloper implements Developer {
+
+    @Override
+    public void writeCode() {
         System.out.println("Java Developer writes Java Code ...");
+
     }
 }

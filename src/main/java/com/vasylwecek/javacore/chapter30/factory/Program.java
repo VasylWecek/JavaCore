@@ -1,6 +1,13 @@
 package chapter30.factory;
 
+
 public class Program {
+    public Program(JavaDeveloper javaDeveloper) {
+    }
+
+    public Program(CppDeveloper cppDeveloper) {
+    }
+
     public static void main(String[] args) {
        // JavaDeveloper javaDeveloper = new JavaDeveloper();
         // javaDeveloper.writeJavaCode();
@@ -36,5 +43,9 @@ public class Program {
         }else {
             throw new RuntimeException(specialty + " is not a valid specialty");
         }
+    }
+
+    public void developProgram() {
+
     }
 }
